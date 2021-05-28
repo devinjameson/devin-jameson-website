@@ -1,13 +1,5 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -32,21 +24,17 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Profile picture"
-      />
-      {author?.name && (
-        <p>
-          Devin Jameson is a frontend developer and designer who mostly does
-          React & TypeScript work.
-        </p>
+      {author?.summary && (
+        <>
+          <p>
+            {`Currently a Senior Product Designer at `}
+            <a href="https://thoughtbot.com">thoughtbot</a>.
+          </p>
+          <p className="small">
+            {`Previously co-founded `}
+            <a href="https://eversoundhq.com">Eversound</a>.
+          </p>
+        </>
       )}
     </div>
   )
