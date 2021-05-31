@@ -5,10 +5,9 @@ module.exports = {
       name: `Devin Jameson`,
       summary: `is a frontend developer and designer.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `The portolio and blog of Devin Jameson.`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `devinjameson`,
     },
   },
   plugins: [
@@ -114,13 +113,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Devin Jameson`,
+        short_name: `DJ`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#b5179e`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
