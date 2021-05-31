@@ -31,8 +31,8 @@ these superfluous rerenders, we can use `useMemo`:
 
 ```typescript
 const someValue = useMemo(
-    () => doSomeExpensiveCalculation(a, b),
-    [a, b]
+  () => doSomeExpensiveCalculation(a, b),
+  [a, b]
 )
 ```
 
