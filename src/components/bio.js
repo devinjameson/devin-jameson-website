@@ -27,7 +27,7 @@ const Bio = () => {
       {author?.summary && (
         <>
           <p>
-            {`Currently a Senior Product Designer at `}
+            {`Senior Product Designer at `}
             <a href="https://thoughtbot.com">thoughtbot</a>.
           </p>
           <p className="small">
