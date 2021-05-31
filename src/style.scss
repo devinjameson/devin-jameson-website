@@ -88,8 +88,11 @@ body {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
-  margin-top: var(--spacing-12);
-  border-top: var(--border-base);
+
+  &.global-footer {
+    margin-top: var(--spacing-12);
+    border-top: var(--border-base);
+  }
 }
 
 hr {
