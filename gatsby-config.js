@@ -3,7 +3,7 @@ module.exports = {
     title: `Devin Jameson`,
     author: {
       name: `Devin Jameson`,
-      summary: `is a frontend developer and designer.`,
+      summary: `Frontend developer and designer.`,
     },
     description: `The portolio and blog of Devin Jameson.`,
     social: {

@@ -56,14 +56,14 @@
   --color-primary: #94007f;
   --color-secondary: #688510;
   --color-tertiary: #1798ae;
-  --color-text-dark: #000000;
-  --color-text: #444444;
+  --color-text: #000000;
   --color-text-light: #757575;
-  --color-heading: #1a202c;
-  --color-heading-black: #000000;
-  --color-accent: #d1dce5;
-  --border-base: 1px solid var(--color-accent);
+  --color-light-gray: #d1dce5;
+  --border-base: 1px solid var(--color-light-gray);
 }
+
+$breakpoint-small: 30rem;
+$breakpoint-medium: 46rem;
 
 /* HTML elements */
 
@@ -88,15 +88,10 @@ body {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
-
-  &.global-footer {
-    margin-top: var(--spacing-12);
-    border-top: var(--border-base);
-  }
 }
 
 hr {
-  background: var(--color-accent);
+  background: var(--color-light-gray);
   height: 1px;
   border: 0;
 }
@@ -121,30 +116,67 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  font-weight: var(--fontWeight-semibold);
 }
 
 h1 {
-  font-weight: var(--fontWeight-semibold);
-  font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  font-size: var(--fontSize-4);
+
+  @media (min-width: $breakpoint-small) {
+    font-size: var(--fontSize-5);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--fontSize-6);
+  }
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-3);
+
+  @media (min-width: $breakpoint-small) {
+    font-size: var(--fontSize-4);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--fontSize-5);
+  }
 }
 
 h3 {
-  font-size: var(--fontSize-4);
+  font-size: var(--fontSize-2);
+
+  @media (min-width: $breakpoint-small) {
+    font-size: var(--fontSize-3);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--fontSize-4);
+  }
 }
 
 h4 {
-  font-size: var(--fontSize-3);
+  font-size: var(--fontSize-2);
+
+  @media (min-width: $breakpoint-small) {
+    font-size: var(--fontSize-3);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--fontSize-4);
+  }
 }
 
 h5 {
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-1);
+
+  @media (min-width: $breakpoint-small) {
+    font-size: var(--fontSize-2);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--fontSize-3);
+  }
 }
 
 h6 {
@@ -209,7 +241,7 @@ blockquote {
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-accent);
+  border-left: var(--spacing-1) solid var(--color-light-gray);
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
@@ -232,7 +264,7 @@ table {
 }
 
 table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
 /* Link */
@@ -246,6 +278,11 @@ a {
     opacity: 0.75;
     transition: opacity 100ms;
   }
+
+  &.gatsby-resp-image-link {
+    opacity: unset;
+    transition: unset;
+  }
 }
 
 /* Custom classes */
@@ -257,16 +294,16 @@ a {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-8);
 }
 
 .main-heading {
-  margin: 0;
+  margin: var(--spacing-8) 0 0 0;
 }
 
 .post-list-item {
   margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
+  margin-top: var(--spacing-6);
 
   header {
     margin-bottom: var(--spacing-4);
@@ -279,8 +316,6 @@ a {
   h3 {
     color: var(--color-secondary);
     font-size: var(--fontSize-2);
-    margin-bottom: var(--spacing-2);
-    margin-top: var(--spacing-0);
   }
 
   &.blog-post-list-item h3 {
@@ -293,23 +328,16 @@ a {
   font-family: var(--font-heading);
   text-decoration: none;
   font-size: var(--fontSize-2);
-  color: var(--color-text-dark);
+  color: var(--color-text);
 }
 
 .bio {
-  padding-bottom: var(--spacing-8);
-  margin-bottom: var(--spacing-8);
-  border-bottom: var(--border-base);
+  margin-bottom: var(--spacing-16);
 
   p {
-    font-size: var(--fontSize-3);
-    margin-bottom: var(--spacing-0);
-    color: var(--color-text-dark);
-
-    &.small {
-      font-size: var(--fontSize-1);
-      color: var(--color-text-light);
-    }
+    color: var(--color-text-light);
+    font-size: var(--fontSize-1);
+    margin-bottom: var(--spacing-3);
 
     a {
       color: var(--color-primary);
@@ -324,28 +352,38 @@ a {
   border-radius: 100%;
 }
 
-h2.posts-header {
-  font-size: var(--fontSize-1);
-  font-weight: var(--fontWeight-medium);
+.posts-group {
+  margin: var(--spacing-16) 0;
+
+  h2 {
+    font-size: var(--fontSize-1);
+    font-weight: var(--fontWeight-bold);
+    margin-bottom: var(--spacing-0);
+    margin-top: var(--spacing-0);
+  }
+
+  ol {
+    margin-top: var(--spacing-0);
+  }
 }
 
 .blog-post {
   header {
     h1 {
-      margin: var(--spacing-0) var(--spacing-0) var(--spacing-4)
+      margin: var(--spacing-0) var(--spacing-0) var(--spacing-6)
         var(--spacing-0);
     }
 
     p {
       font-size: var(--fontSize-2);
-      font-family: var(--font-heading);
     }
   }
 
-  p {
-    font-size: var(--fontSize-3);
+  p,
+  code {
+    font-size: var(--fontSize-1);
 
-    code {
+    @media (min-width: $breakpoint-small) {
       font-size: var(--fontSize-2);
     }
   }
@@ -375,7 +413,7 @@ h2.posts-header {
 
 /* Media queries */
 
-@media (max-width: 42rem) {
+@media (max-width: 42em) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);

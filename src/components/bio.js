@@ -19,7 +19,6 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
   const twitterLink = `https://twitter.com/${social.twitter}`
@@ -27,24 +26,22 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      {author?.summary && (
-        <>
-          <p>
-            {`Senior Product Designer at `}
-            <a href="https://thoughtbot.com">thoughtbot</a>.
-          </p>
-          <p className="small">
-            {`Previously co-founded `}
-            <a href="https://eversoundhq.com">Eversound</a>.
-          </p>
-          <p className="small">
-            {`My `}
-            <a href={twitterLink}>Twitter</a>
-            {` and `}
-            <a href={linkedInLink}>LinkedIn</a>.
-          </p>
-        </>
-      )}
+      <>
+        <p>
+          {`Hey I'm Devin, currently a Senior Product Designer at `}
+          <a href="https://thoughtbot.com">thoughtbot</a>.
+        </p>
+        <p className="small">
+          {`Previously, I co-founded `}
+          <a href="https://eversoundhq.com">Eversound</a>.
+        </p>
+        <p className="small">
+          {`Indeed, I have a `}
+          <a href={twitterLink}>Twitter</a>
+          {` and `}
+          <a href={linkedInLink}>LinkedIn</a>.
+        </p>
+      </>
     </div>
   )
 }
