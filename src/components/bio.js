@@ -31,11 +31,11 @@ const Bio = () => {
           {`Hey I'm Devin, currently a Senior Product Designer at `}
           <a href="https://thoughtbot.com">thoughtbot</a>.
         </p>
-        <p className="small">
+        <p>
           {`Previously, I co-founded `}
           <a href="https://eversoundhq.com">Eversound</a>.
         </p>
-        <p className="small">
+        <p>
           {`Indeed, I have a `}
           <a href={twitterLink}>Twitter</a>
           {` and `}

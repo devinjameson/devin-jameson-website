@@ -379,27 +379,31 @@ a {
     }
   }
 
-  p,
-  code {
-    font-size: var(--fontSize-1);
+  .content {
+    padding-bottom: var(--spacing-4);
 
-    @media (min-width: $breakpoint-small) {
-      font-size: var(--fontSize-2);
+    p,
+    code {
+      font-size: var(--fontSize-1);
+
+      @media (min-width: $breakpoint-small) {
+        font-size: var(--fontSize-2);
+      }
     }
-  }
 
-  a {
-    color: var(--color-secondary);
-  }
+    a {
+      color: var(--color-secondary);
+    }
 
-  img {
-    border-radius: var(--spacing-2);
-    box-shadow: 0 0.2px 2.2px -15px rgba(0, 0, 0, 0.02),
-      0 0.5px 5.3px -15px rgba(0, 0, 0, 0.028),
-      0 1px 10px -15px rgba(0, 0, 0, 0.035),
-      0 1.8px 17.9px -15px rgba(0, 0, 0, 0.042),
-      0 3.3px 33.4px -15px rgba(0, 0, 0, 0.05),
-      0 8px 80px -15px rgba(0, 0, 0, 0.07) !important;
+    img {
+      border-radius: var(--spacing-2);
+      box-shadow: 0 0.2px 2.2px -15px rgba(0, 0, 0, 0.02),
+        0 0.5px 5.3px -15px rgba(0, 0, 0, 0.028),
+        0 1px 10px -15px rgba(0, 0, 0, 0.035),
+        0 1.8px 17.9px -15px rgba(0, 0, 0, 0.042),
+        0 3.3px 33.4px -15px rgba(0, 0, 0, 0.05),
+        0 8px 80px -15px rgba(0, 0, 0, 0.07) !important;
+    }
   }
 }
 
