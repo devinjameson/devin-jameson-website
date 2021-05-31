@@ -22,6 +22,9 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
+  const twitterLink = `https://twitter.com/${social.twitter}`
+  const linkedInLink = `https://linkedin.com/in/${social.linkedIn}`
+
   return (
     <div className="bio">
       {author?.summary && (
@@ -33,6 +36,12 @@ const Bio = () => {
           <p className="small">
             {`Previously co-founded `}
             <a href="https://eversoundhq.com">Eversound</a>.
+          </p>
+          <p className="small">
+            {`My `}
+            <a href={twitterLink}>Twitter</a>
+            {` and `}
+            <a href={linkedInLink}>LinkedIn</a>.
           </p>
         </>
       )}
