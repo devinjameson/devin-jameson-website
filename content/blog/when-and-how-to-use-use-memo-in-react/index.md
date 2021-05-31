@@ -30,9 +30,10 @@ This unnecessary rerendering could result in our UI becoming laggy. To avoid
 these superfluous rerenders, we can use `useMemo`:
 
 ```typescript
-const someValue = useMemo(() => {
-    doSomeExpensiveCalculation(a, b)
-}, [a, b])
+const someValue = useMemo(
+    () => doSomeExpensiveCalculation(a, b),
+    [a, b]
+)
 ```
 
 `useMemo` takes two arguments: the (expensive) function that computes the value
