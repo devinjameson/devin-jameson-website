@@ -25,8 +25,8 @@ const someValue = doSomeExpensiveCalculation(a, b)
 By default, React will recompute `someValue` every time the component rerenders,
 *even if the none of its dependencies have changed*.
 
-This could result the UI being slow or laggy. To solve this problem, we can use
-`useMemo` like this:
+This unnecessary rerendering could make our UI laggy. To avoid these rerenders,
+we can use `useMemo` like this:
 
 ```typescript
 const someValue = useMemo(() => {
