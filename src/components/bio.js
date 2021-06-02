@@ -12,7 +12,8 @@ const Bio = () => {
           }
           social {
             twitter
-            linkedIn
+            linkedin
+            github
           }
         }
       }
@@ -23,7 +24,8 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   const twitterLink = `https://twitter.com/${social.twitter}`
-  const linkedInLink = `https://linkedin.com/in/${social.linkedIn}`
+  const linkedinLink = `https://linkedin.com/in/${social.linkedin}`
+  const githubLink = `https://github.com/${social.github}`
 
   return (
     <div className="bio">
@@ -38,9 +40,11 @@ const Bio = () => {
         </p>
         <p>
           {`Indeed, I have a `}
+          <a href={githubLink}>GitHub</a>
+          {`, `}
           <a href={twitterLink}>Twitter</a>
-          {` and `}
-          <a href={linkedInLink}>LinkedIn</a>.
+          {`, and `}
+          <a href={linkedinLink}>LinkedIn</a>.
         </p>
       </>
     </div>

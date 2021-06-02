@@ -24,8 +24,11 @@ const Layout = ({ location, title, summary, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer className="global-footer">
         <p>© {new Date().getFullYear()} Devin Jameson</p>
+        <a href="https://github.com/devinjameson/devin-jameson-website">
+          Here's the source code for this website.
+        </a>{" "}
       </footer>
     </div>
   )

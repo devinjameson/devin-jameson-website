@@ -8,7 +8,8 @@ module.exports = {
     description: `The portolio and blog of Devin Jameson.`,
     social: {
       twitter: `devinjameson`,
-      linkedIn: `devinjameson`,
+      linkedin: `devinjameson`,
+      github: `devinjameson`,
     },
   },
   plugins: [
