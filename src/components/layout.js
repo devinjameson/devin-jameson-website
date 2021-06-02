@@ -28,7 +28,7 @@ const Layout = ({ location, title, summary, children }) => {
         <p>© {new Date().getFullYear()} Devin Jameson</p>
         <a href="https://github.com/devinjameson/devin-jameson-website">
           Here's the source code for this website.
-        </a>{" "}
+        </a>
       </footer>
     </div>
   )
