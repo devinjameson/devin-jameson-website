@@ -27,11 +27,13 @@ const Bio = () => {
   const linkedinLink = `https://linkedin.com/in/${social.linkedin}`
   const githubLink = `https://github.com/${social.github}`
 
+  const waveEmoji = String.fromCodePoint(0x1f44b)
+
   return (
     <div className="bio">
       <>
         <p>
-          {`Hey I'm Devin, currently a Senior Product Designer at `}
+          {`${waveEmoji} Hey I'm Devin, currently a Senior Product Designer at `}
           <a href="https://thoughtbot.com">thoughtbot</a>.
         </p>
         <p>
