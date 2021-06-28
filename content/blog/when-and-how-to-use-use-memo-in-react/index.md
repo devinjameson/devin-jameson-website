@@ -43,4 +43,4 @@ is only recomputed when one of its dependencies (`a` or `b`) changes.
 I'd also recommend using this [ESLint plugin for React
 Hooks](https://reactjs.org/docs/hooks-rules.html#eslint-plugin) to ensure your
 dependency array contains each value referenced by the function. Otherwise, you
-might encounter some strange or unexepcted behavior.
+might encounter some strange or unexpected behavior.
