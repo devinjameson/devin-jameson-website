@@ -39,7 +39,7 @@ const Bio = () => {
         <p>
           {`Previously, I co-founded `}
           <a href="https://eversoundhq.com">Eversound</a>
-          {`and made digital products at `}
+          {` and made digital products at `}
           <a href="https://thoughtbot.com">thoughtbot</a>.
         </p>
         <p>
