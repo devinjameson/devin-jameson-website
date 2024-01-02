@@ -44,9 +44,9 @@ const Bio = () => {
           <a href="https://eversoundhq.com">Eversound</a>
           {` and made digital products at `}
           <a href="https://thoughtbot.com">thoughtbot</a>
-          {`,`}
+          {`, `}
           <a href="https://evolvtechnology.com">Evolv Technology</a>
-          {`, and`}
+          {`, and `}
           <a href="https://poly.cam">Polycam</a>.
         </p>
         <p>
