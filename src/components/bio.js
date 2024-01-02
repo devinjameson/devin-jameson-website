@@ -37,7 +37,7 @@ const Bio = () => {
           and designer. I have several years of experience using React,
           React Native, and TypeScript to build digital products for companies
           of all shapes and sizes, from pre-seed startups to publicly traded
-          corporations.
+          corporations.`}
         </p>
         <p>
           {`Previously, I co-founded `}
