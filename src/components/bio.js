@@ -33,16 +33,21 @@ const Bio = () => {
     <div className="bio">
       <>
         <p>
-          {`${waveEmoji} Hey I'm Devin, currently a Software Engineer at `}
-          <a href="https://poly.cam">Polycam</a>.
+          {`${waveEmoji} Hey I'm Devin, currently a freelance hybrid developer
+          and designer. I have several years of experience using React,
+          React Native, and TypeScript to build digital products for companies
+          of all shapes and sizes, from pre-seed startups to publicly traded
+          corporations.
         </p>
         <p>
           {`Previously, I co-founded `}
           <a href="https://eversoundhq.com">Eversound</a>
           {` and made digital products at `}
           <a href="https://thoughtbot.com">thoughtbot</a>
-          {` and `}
-          <a href="https://evolvtechnology.com">Evolv Technology</a>.
+          {`,`}
+          <a href="https://evolvtechnology.com">Evolv Technology</a>
+          {`, and`}
+          <a href="https://poly.cam">Polycam</a>.
         </p>
         <p>
           {`Indeed, I have a `}
